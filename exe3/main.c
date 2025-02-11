@@ -26,15 +26,15 @@ int main() {
 
   while (true) {
     if (!gpio_get(BTN_G)) {
-      gpio_put(LED_PIN_G, 1);
       while (!gpio_get(BTN_G)) {
+        gpio_put(LED_PIN_G, 1);
       };
       gpio_put(LED_PIN_G, 0);
     }
 
     if (!gpio_get(BTN_R)) {
-      gpio_put(LED_PIN_R, 1);
       while (!gpio_get(BTN_R)) {
+        gpio_put(LED_PIN_R, 1);
       };
       gpio_put(LED_PIN_R, 0);
     }
